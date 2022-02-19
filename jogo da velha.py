@@ -11,7 +11,7 @@ vencedor = None
 gameRunning = True
 
 
-def placaDeImpressão(borda):
+def placaDeImpresao(borda):
     print(borda[0] + " | " + borda[1] + " | " + borda[2])
     print("|---------|")
     print(borda[3] + " | " + borda[4] + " | " + borda[5])
@@ -66,17 +66,17 @@ def checkDiag(borda):
 def checkIfWin(borda):
     global gameRunning
     if checkHorizontle(borda):
-        placaDeImpressão(borda)
+        placaDeImpresao(borda)
         print(f"O vencedor é {vencedor}! Fez mais que sua Obrigação")
         gameRunning = False
 
     elif checkRow(borda):
-        placaDeImpressão(borda)
+        placaDeImpresao(borda)
         print(f"O vencedor é {vencedor}! Fez mais que sua Obrigação")
         gameRunning = False
 
     elif checkDiag(borda):
-        placaDeImpressão(borda)
+        placaDeImpresao(borda)
         print(f"O vencedor é {vencedor}! Fez mais que sua Obrigação")
         gameRunning = False
 
@@ -84,7 +84,7 @@ def checkIfWin(borda):
 def checkIfTie(borda):
     global gameRunning
     if "-" not in borda:
-        placaDeImpressão(borda)
+        placaDeImpresao(borda)
         print("É uma gravata!")
         gameRunning = False
 
@@ -106,7 +106,7 @@ def computer(borda):
 
 
 while gameRunning:
-    placaDeImpressão(borda)
+    placaDeImpresao(borda)
     playerInput(borda)
     checkIfWin(borda)
     checkIfTie(borda)
